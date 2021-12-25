@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Sunthree</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt="Logo" width="80" /></a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>
+            Need website? <br />
+            Call <span>Sunthree</span>
+          </h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque inventore, exercitationem veniam consequuntur numquam ipsum sed libero quas est possimus, commodi provident placeat consectetur. Temporibus in quo sequi maiores
+            aliquam.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="img/img1.jpg" alt="Landing Page" class="website" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li><img src="img/thumb1.jpg" alt="Thumbnail 1" onclick="imgSlider('img/img1.jpg'); changeCircleColor('#2E86C1')" /></li>
+        <li><img src="img/thumb2.jpg" alt="Thumbnail 2" onclick="imgSlider('img/img2.jpg'); changeCircleColor('#D68910') " /></li>
+        <li><img src="img/thumb3.jpg" alt="Thumbnail 3" onclick="imgSlider('img/img3.jpg'); changeCircleColor('#6C3483')" /></li>
+      </ul>
+      <ul class="sos">
+        <li>
+          <a href="#"><img src="img/sos1.png" alt="Facebook" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/sos4.png" alt="Email" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="img/sos2.png" alt="Instagram" /></a>
+        </li>
+      </ul>
+    </section>
+
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".website").src = anything;
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector(".circle");
+        circle.style.background = color;
+      }
+
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
